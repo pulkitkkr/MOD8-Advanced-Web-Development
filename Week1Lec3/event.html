@@ -1,0 +1,20 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <title>Event Bubbling</title>
+  </head>
+  <body>
+    <div>
+      <div onclick="alert('bubbled Event from button')">
+        <button onclick = "buttonClick(event)" >Click Me</button>
+      </div>
+    </div>
+  <script type="text/javascript">
+    function buttonClick(e) {
+      e.stopPropagation();
+      console.log(e);
+    }
+  </script>
+  </body>
+
+</html>

@@ -1,0 +1,26 @@
+
+<html>
+  <head>
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+      }
+    </script>
+  </head>
+</html>
+<div id="app"></div>
+<!--<div id="containerForComponent2">-->
+</div>
+
+
+<script type="module">
+  import { createApp } from 'vue'
+  import VueComponent from './myComponent.js'
+  import AnotherComponent from './AnotherComponent.js';
+
+  createApp(VueComponent).mount('#app')
+  createApp(AnotherComponent).mount('#containerForComponent2')
+
+</script>
