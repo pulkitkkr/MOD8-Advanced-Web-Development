@@ -1,0 +1,17 @@
+{
+  "name": "compress-gzip-example",
+  "version": "1.0.0",
+  "description": "A small npm package to demonstrate gzip",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo test",
+    "dev": "echo dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "node-gzip": "^1.1.2"
+  }
+}
