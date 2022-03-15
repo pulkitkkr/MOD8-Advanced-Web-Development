@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script type="text/javascript">
+     //  setTimeout(()=>{
+     //   console.log("Hello after 3000")
+     //  }, 3000);
+     //
+     //  console.log("Hello")
+     //
+     //
+     //  function getDataFromBackend(){
+     //    var a;
+     //
+     //    setTimeout(()=>{
+     //      a = 33;
+     //    }, 3000);
+     //
+     //    return a;
+     //  }
+     // const data = getDataFromBackend(); // 3000ms
+     //
+     // console.log(data);
+
+     let dataFromBackend = new Promise(function(resolve, reject) {
+        if(10 % 2 == 0 ){
+          setTimeout(() => resolve({
+            h: 33
+          }), 1000);
+        }
+
+        setTimeout(() => reject("It was Odd"), 1000);
+     });
+
+     // dataFromBackend.then(function(resolvedValue){
+     //   console.log(resolvedValue.h);
+     // }).catch(function (rejectedValue){
+     //   console.log(rejectedValue);
+     // }).finally(function (){
+     //   console.log("It will be executed");
+     // });
+     fetch('https://jsonplaceholder.typicoduyituytitoiiouue.com/todos/1')
+         .then(response => response.json())
+         .then(json => console.log(json)).catch(err => console.log(err));
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
