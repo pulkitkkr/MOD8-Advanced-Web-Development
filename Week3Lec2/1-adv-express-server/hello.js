@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+router.post('/', function (req, res) {
+
+})
+
 router.get('/', function (req, res) {
-  res.send("You are at root")
+  res.send("<h1>You are at root</h1>")
 })
 
 router.get('/go', function (req, res) {
