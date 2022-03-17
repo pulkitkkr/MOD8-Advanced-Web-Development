@@ -1,11 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const userRouter = require("./user")
+const userRoutes = require("./routes/userRoutes")
+const defaultHeaderMiddleware = require("./middlewares/defaultHeader")
+const logDetailMiddleware = require("./middlewares/logUserDetail")
+
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use("/user", userRouter);
+app.use(logDetailMiddleware);
+app.use(defaultHeaderMiddleware);
+app.use("/user", userRoutes);
 
 app.listen(8081);
